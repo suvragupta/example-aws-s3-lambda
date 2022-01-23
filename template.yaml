@@ -1,5 +1,5 @@
 AWSTemplateFormatVersion: 2010-09-09
-Transform: AWS::Serverless-2016-10-31
+Transform: AWS::Serverless-2016-10-31 #sam
 Globals:
   Function:
     MemorySize: 128
@@ -16,7 +16,7 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       CodeUri: .
-      Handler: lambda.handler
+      Handler: lambda.handler # inside lambda file we have a handler function
       Description: Function that is called when a file is stored in S3.
       Runtime: nodejs12.x
       Events:
